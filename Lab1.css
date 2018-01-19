@@ -1,0 +1,90 @@
+#definicion{
+    background-color: beige;
+    padding: 20px;
+    display: inline-block;
+
+
+
+
+}
+
+#preguntas{
+    align: center;
+
+
+
+}
+.subtitulo{
+    font: bold;
+    font-size: 15px;
+
+}
+
+nav{
+    border-color: navajowhite;
+    background-color: lightgray;
+
+    }
+
+
+hr{
+    border-style: inset;
+    size: 200px;
+    display: block;
+
+
+
+}
+
+a:link {
+        color:cornflowerblue;
+        font-family:Impact;
+}
+
+a:visited{
+    color: white;
+
+}
+
+a:hover{
+    color: green;
+    font-size: 25px;
+}
+
+a:active{
+    color: darkgoldenrod;
+    font-family: "Adobe Arabic";
+
+}
+
+.button {
+    border-top: 1px solid #4f585e;
+    background: #000000;
+    background: -webkit-gradient(linear, left top, left bottom, from(#e6eaed), to(#000000));
+    background: -webkit-linear-gradient(top, #e6eaed, #000000);
+    background: -moz-linear-gradient(top, #e6eaed, #000000);
+    background: -ms-linear-gradient(top, #e6eaed, #000000);
+    background: -o-linear-gradient(top, #e6eaed, #000000);
+    padding: 11.5px 23px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    box-shadow: rgba(0,0,0,1) 0 1px 0;
+    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    color: white;
+    font-size: 14px;
+    font-family: Georgia, serif;
+    text-decoration: none;
+    vertical-align: middle;
+}
+.button:hover {
+    border-top-color: #28597a;
+    background: #28597a;
+    color: #ccc;
+}
+.button:active {
+    border-top-color: #1b435e;
+    background: #1b435e;
+}
