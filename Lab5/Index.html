@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$Title$</title>
+    <link rel="stylesheet" type="text/css" href="Styles.css">
+</head>
+<body>
+<h3>Validación de Password</h3>
+
+
+<div>
+    <form action="/action_page.php">
+        <label for="usrname">Nombre de Usuario</label>
+        <input type="text" id="usrname" name="usrname" required>
+
+        <label for="psw">Password</label>
+        <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+               title="Debe contener al menos un número, una letra mayúscula y otra en minisculas, además de tener más de 8 carácteres" required>
+        <br>
+
+       <!-- <label for="psw2">Password confirmation</label>
+        <input type="password" id="psw2" name="psw2" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+               title="Debe contener al menos un número, una letra mayúscula y otra en minisculas, además de tener más de 8 carácteres" required>
+        -->
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+<div>
+    <h3>Requisitos de contraseña</h3>
+    <p id="letter" class="invalid">una <b>Letra</b> Minuscula</p>
+    <p id="capital" class="invalid">una <b>letra</b> mayusucula</p>
+    <p id="number" class="invalid">una <b>numero</b></p>
+    <p id="length" class="invalid">almenos <b>8 caracteres</b></p>
+   <!-- <p id="psw2" class="invalid">Contraseña <b>no coincide</b></p>-->
+</div>
+<hr>
+<p><h3>Tienda</h3></p>
+<div>
+    <input min="0" max="10" step="1" value="0" type="number">
+
+
+</div>
+
+
+    <p>bibliografía: https://www.w3schools.com/tags/att_input_required.asp</p>
+    <p>https://www.w3schools.com/howto/howto_js_password_validation.asp</p>
+    <p>https://www.w3schools.com/cssref/sel_before.asp</p>
+    <p>https://www.w3schools.com/js/js_validation.asp</p>
+    <p>https://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison_12</p>
+
+    <script type = "text/javascript" src="script.js">
+
+    </script>
+</body>
+<footer> Paulo Solis Alvarez A01207593   Hecho con PHPSTORM</footer>
+</html>
