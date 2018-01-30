@@ -23,8 +23,8 @@ var padre2 = document.getElementById("Father2");
 });
 
 var padre3 = document.getElementById("Father3");
-padre3.addEventListener("load", function () {
-    console.log("hola");
+padre3.addEventListener("mouseover", function () {
+
     setInterval(function(){
         if (padre3.style.visibility === "hidden") {
             padre3.style.visibility = "visible";
