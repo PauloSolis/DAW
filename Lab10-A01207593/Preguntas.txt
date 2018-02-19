@@ -1,0 +1,21 @@
+Hola que tal :')
+
+¿Que muestra la instrucción? 
+
+	Las muestra los datos de la tabla. 
+
+Ejecuta las instrucciones que contiene el archivo crear.sql 
+¿Qué efecto tuvo esta acción?
+	Crea las tablas proveedores, proyectos, entregas y materiales con sus 
+	llaves
+
+
+¿Qué utilidad tiene esta manera de ejecutar los comandos de SQL?
+	Puedes mandar todas las intrucciones de una sola vez, en vez de hacerlo uno por uno. 
+
+
+¿Qué relación tiene el contenido de este archivo (materiales.sql) con el formato en que se encuentran los datos en el archivo materiales.csv?
+	son los mismos datos, pero está almacenado en la base de datos.
+
+¿Qué sucedió?
+	te desplega todos los datos de materiales.
