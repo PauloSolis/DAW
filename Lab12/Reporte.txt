@@ -1,0 +1,54 @@
+/*Paulo Solís Álvarez
+
+Revisa el contenido de la tabla materiales y determina si existe alguna inconsistencia en el contenido de la tabla. ¿Cuál es? ¿A qué se debe?
+
+	Se creo una nueva row donde había un nuevo elemento con clave 1000 y costo 1000, pero sin descripción.
+
+
+¿Qué ocurrió?
+	Sale error, debido a que está violando uno de los restricciones.
+
+
+¿Qué sentencias utilizaste para definir las llaves primarias?
+	La clave es la llave principal, por lo que no puede haber llaves repetidas.
+
+
+
+
+
+¿Qué sentencias utilizaste para definir este constrait?
+	ALTER TABLE Materiales add constraint llaveMateriales PRIMARY KEY (Clave) 7
+
+
+
+¿Qué particularidad observas en los valores para clave, rfc y numero?
+	Son datos del mismo tipo, pero no siguen el mismo patrón
+
+
+¿Cómo responde el sistema a la inserción de este registro? 
+	Los agrega en el orden en el que fueron mandados.
+
+¿Qué significa el mensaje que emite el sistema?
+	Que el método de insert crea un conflicto con la restricción cfeentregan
+
+¿Qué significado tiene la sentencia anterior? 
+	la clave no es válida ya que compara la clave de entregan con la clave de materiales como referecia
+
+
+¿Que uso se le está dando al gatedate? 
+	agarr la fecha que tiene el servidor y la convierte en date.
+
+¿Tiene sentido el vlaor del campo de cantidad? 
+	no, porque si no hubiera ninguno no tendría sentido manternerlo en la base de datos.
+
+
+¿Qué significa el mensaje que emite el sistema?
+	Que el al crear una nueva entrada se crea un conflicto con la restricción cantidad.
+¿Qué significado tiene la sentencia anterior?
+	No puede haber entradas en la base de datos que contengan cantidad = 0 
+
+
+
+
+Integridad referencia: es la referencia que se hace de la columna de una tabla, hacía la misma
+columna, pero de otra tabla.
