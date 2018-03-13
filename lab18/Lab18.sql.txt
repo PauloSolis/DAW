@@ -1,0 +1,95 @@
+SET DATEFORMAT dmy
+SELECT SUM(e.Cantidad) as 'Cantidad total',  SUM(e.Cantidad*(m.Costo+(m.Costo*(m.PorcentajeImpuesto/100)))) as 'Importe'
+FROM Entregan e, Materiales m
+WHERE e.Clave = m.Clave 
+AND e.Fecha BETWEEN '01/01/1997' AND '31/12/1997'
+
+
+
+SELECT e.RFC, COUNT(e.RFC) as 'Num. de Entregas', SUM(e.Cantidad*(m.Costo+(m.Costo*(m.PorcentajeImpuesto/100)))) as 'Importe'
+FROM Entregan e, Materiales m
+WHERE e.Clave = m.Clave
+GROUP BY e.RFC
+
+
+SELECT e.Clave, m.Descripcion, SUM(e.Cantidad) as 'Total Entregado', MIN(e.Cantidad) as 'Cantidad Minima', MAX(e.Cantidad) as 'Cantidad Maxima', SUM(E.Cantidad*(M.Costo+(M.Costo*(M.PorcentajeImpuesto/100)))) as 'Importe'
+FROM Materiales m, Entregan e
+WHERE m.Clave = e.Clave
+GROUP BY e.Clave, m.Descripcion
+HAVING avg(e.Cantidad) > 400
+
+SELECT e.RFC, e.Clave, m.Descripcion, avg(e.Cantidad) as 'Promedio'
+FROM Entregan e, Materiales m
+WHERE e.Clave = m.Clave
+GROUP BY e.Clave, e.RFC, m.Descripcion
+HAVING avg(e.Cantidad) >=500
+ORDER BY e.RFC
+
+SELECT e.RFC, e.Clave, m.Descripcion, avg(e.Cantidad) as 'Promedio'
+FROM Entregan e, Materiales m
+WHERE e.Clave = m.Clave
+GROUP BY e.Clave, e.RFC, m.Descripcion
+HAVING avg(e.Cantidad)<370 OR avg(e.Cantidad)>450
+ORDER BY e.RFC
+
+INSERT INTO Materiales
+VALUES(1510,'Tezontle del chido',180,3.02)
+
+
+INSERT INTO Materiales
+VALUES(1511,'Cantera verde',230,2.80)
+
+
+INSERT INTO Materiales
+VALUES(1512,'Vigas de metal',530,1.02)
+
+INSERT INTO Materiales
+VALUES(1513,'Bloques de adamantium',1000,5)
+
+INSERT INTO Materiales
+VALUES(1514,'Arcilla',128,2.03)
+
+SELECT m.Clave, m.Descripcion
+FROM Materiales m
+WHERE Clave NOT IN (SELECT e.Clave FROM Entregan e)
+
+SELECT e.RFC
+FROM Entregan e, Proyectos pr
+WHERE e.Numero = p.Numero
+AND p.Denominacion LIKE '%vamos%'
+OR p.Denominacion LIKE '%Limpio%'
+
+SELECT m.Descripcion
+FROM Materiales m
+WHERE m.Clave NOT IN (SELECT DISTINCT e.Clave
+FROM Entregan e, Proyectos pr 
+WHERE pr.Denominacion LIKE '%CIT%')
+
+SELECT RFC, AVG(Cantidad) as 'Promedio deEntregas'
+FROM Entregan
+GROUP BY RFC
+HAVING avg(Cantidad)>(SELECT avg(Cantidad) FROM Entregan WHERE RFC LIKE '%VAGO780901%')
+
+
+SET DATEFORMAT dmy
+SELECT DISTINCT Prov.RFC, Prov.RazonSocial
+FROM Entregan E, Proveedores Prov, Proyectos Proy
+WHERE E.RFC=Prov.RFC AND E.Numero=Proy.Numero
+AND Proy.Denominacion LIKE '%infonavit%'
+AND E.Fecha BETWEEN '01/01/2000' AND '31/12/2000'
+GROUP BY Prov.RFC, Prov.RazonSocial
+HAVING SUM(E.Cantidad) >
+(
+SELECT DISTINCT SUM(E.Cantidad) as 'Cantidades del 2000'
+FROM Entregan E, Proveedores Prov, Proyectos Proy
+WHERE E.RFC=Prov.RFC AND E.Numero=Proy.Numero
+AND Proy.Denominacion LIKE '%infonavit%'
+AND E.Fecha BETWEEN '01/01/2001' AND '31/12/2001'
+GROUP BY Prov.RFC, Prov.RazonSocial
+)
+
+
+
+
+
+
