@@ -1,0 +1,8 @@
+¿Qué hace el primer bloque del cogigo? (Bloque del IF)
+DIce que si existe un creaMaterial almacenado, cierra el procedimiento CreaMaterial
+
+¿para que sirve la instrucción GO?
+Es un comando de instrucciones en donde se especifican una modificación desde donde se abre hasta donde se cierra
+
+
+Lorem Ipsun 
