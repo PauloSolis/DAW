@@ -1,8 +1,13 @@
-�Qu� hace el primer bloque del cogigo? (Bloque del IF)
+�Qu� hace el primer bloque del cogigo? (Bloque del IF)
 DIce que si existe un creaMaterial almacenado, cierra el procedimiento CreaMaterial
 
-�para que sirve la instrucci�n GO?
-Es un comando de instrucciones en donde se especifican una modificaci�n desde donde se abre hasta donde se cierra
+�para que sirve la instrucci�n GO?
+Es un comando de instrucciones en donde se especifican una modificaci�n desde donde se abre hasta donde se cierra
 
+¿Explica que recibe como parámetro este Procedimiento y qué tabla modifica? la clave, descripción, cosoto e impuesto y los inserta dentro,
+en este caso cuando insertas algun nuevo material con los parametros en orden, se debe ver reflejado en la tabla.
 
-Lorem Ipsun 
+Contesta en tu reporte las siguientes preguntas de reflexión:
+¿Qué ventajas tienen el utilizar Store Procedures en una aplicación cliente-servidor?
+permiten la programación modular y tienen un tiempo de ejecución menor.
+¿Qué ventajas tiene utilizar SP en un proyecto?
