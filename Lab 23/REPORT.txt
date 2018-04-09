@@ -1,0 +1,30 @@
+¿Qué pasa cuando deseas realizar esta consulta?
+
+La segunda sesión te carga todos los datos ingresados, la primera se queda trabado en ejecutandose.
+la transacción se incio, pero nunca se subieron los cambios y tal como dijeron, una transaccion se deshace o se completa.
+al no hacerlo no deja entrar al otro usuario para que pueda trabajar.
+
+ROLLBACK TRANSACTION PRUEBA2
+
+Revisa nuevamente el contenido de la tabla clientes_banca desde la ventana que inicializaste como la segunda sesión.
+
+SELECT * FROM CLIENTES_BANCA
+
+¿Qué ocurrió y por qué? 
+	Regresa al estado antes de iniciar los datos.
+
+¿Para qué sirve el comando @@ERROR revisa la ayuda en línea?
+checa los errores, como está en 0 hace que se haga el commit, de lo contrarios realiza el rollback
+
+¿Explica qué hace la transacción?
+Inserta unos nuevas transacciones, pero al momento en el que lo intenta ocurre un error, porque ya hay alguien con ese numero de cuenta
+
+
+¿Hubo alguna modificación en la tabla? Explica qué pasó y por qué.
+
+No, hubo un error, entonces se regreso a la normalidad.
+
+
+
+
+

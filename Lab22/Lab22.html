@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet" type="text/css">
+    <link href="CSS/palette.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<div class="dark-primary-color">
+<div class="top-bar">
+  <div class="top-bar-left">
+    <ul class="menu">
+      <li class="menu-text">Lab22</li>
+        <li><a  href="#video1">Video 1</a></li>
+         <li><a href="#Video2">Video2</a></li>
+      <li><a href="#Pregunta">Pregunta</a></li>
+     
+    </ul>
+  </div>
+</div>
+</div>
+
+
+<header>
+<div class="callout large primary">
+  <div class="text-center">
+    <h1>Desarrollo de aplicaciones web</h1>
+    <h2 >bases de datos</h2>
+  </div>
+</div>
+</header>
+
+<article class="grid-container">
+  <div class="grid-x align-center">
+    <div class="cell medium-8">
+        <h3 id="Video1"> Video</h3>
+         <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+    <div id="player"></div>
+
+    </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div>
+      <h2 id="video2">video2</h2><br>
+          <div id="player2"></div>
+   
+      </div>
+      <br>
+      <br>
+      <br>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="grid-x align-center">
+          <div class="cell medium-8">
+            <div class="blog-post">
+              <h3 id="Pregunta">Pregunta <br><small>¿Qué ventajas y desventajas tiene la integración de tus aplicaciones web con servicios web desarrollados por terceros? </small></h3>
+              <p>EL uso de las aplicaciones web de terceros es muy útil débido a que normalmente son usadas con frecuencia, ahorra tiempo al desarrolador
+              además de que también son estables, y la desventaja es que si se cae dicha aplicación de tercero también te afectaría a ti.</p>
+              <div class="callout">
+                <ul class="menu simple">
+
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>
+  </article>
+   <script>
+   
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+   
+     
+      var player;
+      var player2;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '720',
+          width: '1080',
+          videoId: 'r1o-Ew1fhH8' ,
+          events: {
+            'onReady': onPlayerReady
+            
+          }
+        });
+        
+         player2 = new YT.Player('player2', {
+          height: '1080',
+          width: '1920',
+          videoId: 'G1IbRujko-A',
+          events: {
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+      
+      
+    
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
+
+    
+      var done = false;
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+          setTimeout(stopVideo, 6000);
+          done = true;
+        }
+      }
+      function stopVideo() {
+        player.stopVideo();
+      }
+    </script>
+
+  </body>
+    <footer>Hecho con PHPStorm y foundation A01207593</footer>
+</html>
